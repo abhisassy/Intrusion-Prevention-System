@@ -13,7 +13,7 @@ def sendpackets():
 	jsonfiles = df2.to_json(orient='records')
 
 	for i in range(len(df.index)):
-		r= requests.post("http://192.168.99.100:1000/ips",data=jsonfiles) #replace your ip here 
+		r= requests.post("http://your_ip:1000/ips",data=jsonfiles) #replace your ip here 
 		print(r.text)
 		df2 = df[i:i+1]
 		jsonfiles = df2.to_json(orient='records')
