@@ -58,7 +58,7 @@ def predict():
 	res = aclf.predict(df)
 	#res=0
 	if res == 1:
-		requests.post("http://192.168.99.100/ips",data=d)
+		requests.post("http://your_ip/ips",data=d) #replace your ip here
 		return "accepted"
 	
 	return "dropped"
